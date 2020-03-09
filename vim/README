@@ -1,0 +1,5 @@
+dependency:
+    vim-plug: https://github.com/junegunn/vim-plug.git
+    vividchalk: https://github.com/tpope/vim-vividchalk.git
+    python: https://github.com/vim-python/python-syntax.git
+    emmet (html): https://github.com/mattn/emmet-vim.git
