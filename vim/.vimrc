@@ -54,5 +54,5 @@ let g_netrw_list_hide.=',\(^\|\s\s\)\zs\.\S+'
 
 "nmap <C-t> :NERDTreeToggle<CR>
 "nmap <C-h> <c-w>w
-nmap <C-o> :find<Space> 
+nmap <C-p> :find<Space> 
 nmap <C-l> :buffers<CR>:buffer<Space>
