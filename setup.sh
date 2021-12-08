@@ -1,4 +1,7 @@
-$PYTHON_CONFIG_DIR=/usr/lib/python3.9/config-3.9-x86_64-linux-gnu
+PYTHON_CONFIG_DIR=/usr/lib/python3.9/config-3.9-x86_64-linux-gnu
+GIT_MAIL=""
+GIT_NAME=""
+GIT_EDITOR="vim"
 
 if_exists_rm () {
     if [ -f $1 ]; then
@@ -52,6 +55,10 @@ sudo apt-get install bash-completion
 #
 
 sudo apt-get install git
+git config --global user.name $GIT_NAME
+git config --global user.email $GIT_MAIL
+git config --global core.editor $GIT_EDITOR
+git config --global rebase.autosquash true
 echo 'alias gss="git status"' >> ~/.bash_aliases
 
 
