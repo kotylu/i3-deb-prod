@@ -6,6 +6,8 @@ if_exists_rm () {
     fi
 }
 
+sudo if_exists_rm /etc/apt/sources.list
+sudo cp ./debian11-sources.list /etc/apt/sources.list
 sudo apt-get update
 sudo apt-get upgrade -y
 
