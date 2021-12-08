@@ -1,3 +1,4 @@
+#!/bin/sh
 PYTHON_CONFIG_DIR=/usr/lib/python3.9/config-3.9-x86_64-linux-gnu
 GIT_MAIL=""
 GIT_NAME=""
