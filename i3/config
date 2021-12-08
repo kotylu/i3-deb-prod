@@ -40,6 +40,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym Control+Mod1+Insert exec i3lock
+bindsym Control+Mod1+Delete exec shutdown
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -127,8 +128,6 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+Mod1+l move workspace to output right
 bindsym $mod+Mod1+h move workspace to output left
 
-bindsym Control+Mod1+l exec /bin/lock
-bindsym Control+Mod1+Delete exec /bin/shutnow
 bindsym Mod1+Up exec amixer -D pulse sset Master 2%+
 bindsym Mod1+Down exec amixer -D pulse sset Master 2%-
 
