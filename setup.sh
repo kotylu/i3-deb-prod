@@ -90,6 +90,7 @@ sudo npm install -g typescript
 # Additional utils
 #
 #
+sudo apt-get install wget
 sudo ln -s /usr/sbin/shutdown /usr/bin/shutdown
 sudo ln -s /usr/sbin/reboot /usr/bin/reboot
 sudo apt-get install xclip
