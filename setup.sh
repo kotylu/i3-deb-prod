@@ -80,7 +80,7 @@ cd vim/src
     --enable-multibyte \
     --enable-python3interp \
     --with-python3-command=python3 \
-    --with-python3-config-dir=/usr/lib/python3.9/config-3.9-x86_64-linux-gnu/
+    --with-python3-config-dir=$PYTHON_CONFIG_DIR
 make
 sudo make install
 cd ../../
