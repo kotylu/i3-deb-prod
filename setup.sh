@@ -24,6 +24,12 @@ fi
 cp ./i3/i3blocks.conf ~/.config/i3/i3blocks.conf
 cp ./i3/b1.jpg ~/.config/i3/b1.jpg
 
+# clone i3gaps from github and run instalation script
+git clone "https://github.com/maestrogerardo/i3-gaps-deb.git"
+cd i3-gaps-deb
+./i3-gaps-deb
+cd ../
+
 
 #
 #
