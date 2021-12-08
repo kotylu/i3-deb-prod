@@ -1,5 +1,11 @@
 $PYTHON_CONFIG_DIR=/usr/lib/python3.9/config-3.9-x86_64-linux-gnu
 
+if_exists_rm () {
+    if [ -f $1 ]; then
+        rm $1;
+    fi
+}
+
 sudo apt-get update
 sudo apt-get upgrade -y
 
@@ -13,14 +19,10 @@ sudo apt-get install i3blocks
 sudo apt-get install compton
 sudo apt-get install feh
 
-if [ -f ~/.config/i3/conf ]; then
-    rm ~/.config/i3/config
-fi
+if_exists_rm ~/.config/i3/config
 cp ./i3/config ~/.config/i3/config
 
-if [ -f ~/.config/i3/i3blocks.conf ]; then
-    rm ~/.config/i3/i3blocks.conf
-fi
+if_exists_rm ~/.config/i3/i3blocks.conf
 cp ./i3/i3blocks.conf ~/.config/i3/i3blocks.conf
 cp ./i3/b1.jpg ~/.config/i3/b1.jpg
 
@@ -41,13 +43,21 @@ sudo apt-get install ./gnome-terminal-data_3.28.1-1ubuntu1mint2_all.deb
 sudo apt-get install ./gnome-terminal_3.28.1-1ubuntu1mint2_amd64.deb
 sudo apt-get install bash-completion
 
+#
+#
+# install git with bash_aliases
+#
+#
+
+sudo apt-get install git
+echo 'alias gss="git status"' >> ~/.bash_aliases
+
 
 #
 #
 # install vim 8.2
 #
 #
-sudo apt-get install git
 sudo apt-get install cmake
 sudo apt-get install make
 sudo apt-get install clang
@@ -90,9 +100,29 @@ sudo npm install -g typescript
 # Additional utils
 #
 #
+
+# install wget
 sudo apt-get install wget
+
+# make symlink for shutdown
+sudo if_exists_rm /usr/bin/shutdown
 sudo ln -s /usr/sbin/shutdown /usr/bin/shutdown
+
+# make symlink for reboot
+sudo if_exists_rm /usr/bin/reboot
 sudo ln -s /usr/sbin/reboot /usr/bin/reboot
+
+# XCLIP
 sudo apt-get install xclip
 echo 'alias xclipin="xclip -selection clipboard"' >> ~/.bash_aliases
-echo 'alias gss="git status"' >> ~/.bash_aliases
+
+
+
+
+#
+#
+# cleanup
+#
+#
+
+sudo apt-get autoremove
