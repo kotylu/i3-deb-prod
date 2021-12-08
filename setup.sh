@@ -101,8 +101,9 @@ sudo npm install -g typescript
 #
 #
 
-# install wget
+# install additionals
 sudo apt-get install wget
+sudo apt-get install netcat
 
 # make symlink for shutdown
 sudo if_exists_rm /usr/bin/shutdown
