@@ -121,9 +121,6 @@ sudo npm install -g typescript
 #
 #
 
-# install additionals
-sudo apt-get install wget
-sudo apt-get install netcat
 
 # make symlink for shutdown
 sudo if_exists_rm /usr/bin/shutdown
@@ -137,6 +134,10 @@ sudo ln -s /usr/sbin/reboot /usr/bin/reboot
 sudo apt-get install xclip
 echo 'alias xclipin="xclip -selection clipboard"' >> ~/.bash_aliases
 
+# install additionals
+sudo apt-get install wget
+sudo apt-get install netcat
+sudo apt-get install tree
 
 
 
