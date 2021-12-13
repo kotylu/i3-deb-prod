@@ -24,12 +24,22 @@ sudo apt-get install i3
 sudo apt-get install i3blocks
 sudo apt-get install compton
 sudo apt-get install feh
+sudo apt-get install fonts-font-awesome
+sudo apt-get install fonts-powerline
 
 if_exists_rm ~/.config/i3/config
 cp ./i3/config ~/.config/i3/config
 
-if_exists_rm ~/.config/i3/i3blocks.conf
-cp ./i3/i3blocks.conf ~/.config/i3/i3blocks.conf
+if_exists_rm ~/.config/compton.conf
+cp ./compton/compton.conf ~/.config/compton.conf
+
+# status bar
+git clone "https://github.com/tobi-wan-kenobi/bumblebee-status.git"
+cp -r bumblebee-status ~/.config/i3/
+
+
+#if_exists_rm ~/.config/i3/i3blocks.conf
+#cp ./i3/i3blocks.conf ~/.config/i3/i3blocks.conf
 cp ./i3/b1.jpg ~/.config/i3/b1.jpg
 
 # clone i3gaps from github and run instalation script
@@ -137,3 +147,4 @@ echo 'alias xclipin="xclip -selection clipboard"' >> ~/.bash_aliases
 #
 
 sudo apt-get autoremove
+sudo apt-get install fonts-font-awesome

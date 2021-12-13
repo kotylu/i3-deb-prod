@@ -183,8 +183,15 @@ bindsym $mod+d exec dmenu_run -l 3 -p "" -sf "$lovely-color" -sb "$inactive-text
 #bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 80 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575CD" -font "System San Francisco Display 18"
 
 bar {
-	position top
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+        font pango:Inconsolata 10
+	    position top
+        tray_output none
+        status_command ~/.config/i3/bumblebee-status/bumblebee-status \
+                -m pasink disk memory cpu nic battery datetime \
+                -p pulseaudio.autostart=true memory.format='{percent:.02f}%' disk.format='{percent:.02f}%' nic.states='^down' \
+                -t firefox-dark-powerline
+
+#i3blocks -c ~/.config/i3/i3blocks.conf
     colors {
         focused_workspace    $bg-color           $inactive-text-color    $lovely-color             
         inactive_workspace   $inactive-bg-color  $inactive-bg-color      $inactive-text-color    
