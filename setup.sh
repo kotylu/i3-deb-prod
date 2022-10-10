@@ -139,6 +139,8 @@ sudo apt-get install wget
 sudo apt-get install netcat
 sudo apt-get install tree
 
+# install graphic drivers: docs - https://launchpad.net/~oibaf/+archive/ubuntu/graphics-drivers
+sudo add-apt-repository ppa:oibaf/graphics-drivers
 
 
 #
